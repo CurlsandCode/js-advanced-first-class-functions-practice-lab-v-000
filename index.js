@@ -18,3 +18,11 @@ const driversByRevenue = function (drivers) {
 });
  return revenueSorter;
 }
+
+const driversByName = function (drivers){
+  const compare = function (a,b){
+    return (a.name).localeCompare(.name);
+  };
+  const sortedByName = drivers.slice().sort(compare);
+  return sortedByName;
+}

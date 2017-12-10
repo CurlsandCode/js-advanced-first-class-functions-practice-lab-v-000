@@ -12,7 +12,7 @@ const logDriversByHometown = function (drivers, location) {
    })
 };
 
-const driversByRevenue = function (driver) {
+const driversByRevenue = function (drivers) {
   const revenueSorter = drivers.slice().sort(function (rev1, rev2) {
   return rev1.revenue - rev2.revenue;
 });

@@ -26,3 +26,16 @@ const driversByName = function (drivers) {
   const sortedByName = drivers.slice().sort(compare);
   return sortedByName;
 };
+
+const totalRevenue = function (drivers) {
+
+  const reduceDriverRevenue = function (agg, el, i, arr) {
+    return agg + el.revenue;
+  };
+
+  return drivers.reduce(reduceDriverRevenue, 0);
+}
+
+const averageRevenue = function (drivers) {
+  return (totalRevenue(drivers) / drivers.length) ;
+}

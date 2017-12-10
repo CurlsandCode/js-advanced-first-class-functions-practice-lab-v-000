@@ -7,7 +7,15 @@ const logDriverNames = function (drivers) {
 
 const logDriversByHometown = function (drivers, location) {
    drivers.forEach(function (driver) {
-     if (driver.hometown === location) 
+     if (driver.hometown === location)
      console.log(driver.name);
    })
 };
+
+const driversByRevenue = function (driver) {
+  const revenueSorter = function (rev1, rev2) {
+  return rev1 - rev2;
+};
+ 
+driversByRevenue.slice().sort(revenueSorter);
+}

@@ -17,12 +17,12 @@ const driversByRevenue = function (drivers) {
   return rev1.revenue - rev2.revenue;
 });
  return revenueSorter;
-}
+};
 
-const driversByName = function (drivers){
-  const compare = function (a,b){
+const driversByName = function (drivers) {
+  const compare = function (a,b) {
     return (a.name).localeCompare(.name);
   };
   const sortedByName = drivers.slice().sort(compare);
   return sortedByName;
-}
+};
